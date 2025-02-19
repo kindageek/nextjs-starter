@@ -1,10 +1,11 @@
 'use client';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 // Error boundaries must be Client Components
 
 export default function GlobalError({
-  error,
+  error: _error,
   reset,
 }: {
   error: Error & { digest?: string };
