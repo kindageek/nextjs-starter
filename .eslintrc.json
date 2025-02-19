@@ -1,0 +1,58 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked"
+  ],
+  "rules": {
+    "@typescript-eslint/no-require-imports": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/await-thenable": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-img-element": "off",
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        "prefer": "type-imports",
+        "fixStyle": "inline-type-imports"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": {
+          "attributes": false
+        }
+      }
+    ],
+    "default-param-last": "off",
+    "@typescript-eslint/default-param-last": "error",
+    "max-params": "off",
+    "@typescript-eslint/max-params": [
+      "error",
+      {
+        "countVoidThis": false,
+        "max": 2 // use object if params > 2
+      }
+    ],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off"
+  }
+}
